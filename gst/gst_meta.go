@@ -71,10 +71,10 @@ func GetAPIInfo(name string) *MetaInfo {
 }
 
 // GetAPITags retrieves the tags for the given api type.
-func GetAPITags(apiType glib.Type) []string {
-	tags := C.gst_meta_api_type_get_tags(C.GType(apiType))
-	return goStrings(C.sizeOfGCharArray(tags), tags)
-}
+// func GetAPITags(apiType glib.Type) []string {
+// 	tags := C.gst_meta_api_type_get_tags(C.GType(apiType))
+// 	return goStrings(C.sizeOfGCharArray(tags), tags)
+// }
 
 // APIHasTag returns true if the given api has the given tag.
 func APIHasTag(api glib.Type, tag string) bool {

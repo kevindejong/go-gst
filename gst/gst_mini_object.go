@@ -48,9 +48,9 @@ func (m *MiniObject) Unref() { C.gst_mini_object_unref(m.Instance()) }
 
 // AddParent adds the given object as a parent of this object.
 // See https://gstreamer.freedesktop.org/documentation/gstreamer/gstminiobject.html?gi-language=c#gst_mini_object_add_parent.
-func (m *MiniObject) AddParent(parent *MiniObject) {
-	C.gst_mini_object_add_parent(m.Instance(), parent.Instance())
-}
+// func (m *MiniObject) AddParent(parent *MiniObject) {
+// 	C.gst_mini_object_add_parent(m.Instance(), parent.Instance())
+// }
 
 // Copy creates a copy of this object.
 func (m *MiniObject) Copy() *MiniObject {

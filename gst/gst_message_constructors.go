@@ -124,13 +124,13 @@ func NewDeviceAddedMessage(src interface{}, device *Device) *Message {
 
 // NewDeviceChangedMessage creates a new device-changed message. The device-changed message is produced by a DeviceProvider or a DeviceMonitor.
 // They announce that a device properties has changed and device represent the new modified version of changed_device.
-func NewDeviceChangedMessage(src interface{}, device, changedDevice *Device) *Message {
-	srcObj := getMessageSourceObj(src)
-	if srcObj == nil {
-		return nil
-	}
-	return wrapMessage(C.gst_message_new_device_changed(srcObj, device.Instance(), changedDevice.Instance()))
-}
+// func NewDeviceChangedMessage(src interface{}, device, changedDevice *Device) *Message {
+// 	srcObj := getMessageSourceObj(src)
+// 	if srcObj == nil {
+// 		return nil
+// 	}
+// 	return wrapMessage(C.gst_message_new_device_changed(srcObj, device.Instance(), changedDevice.Instance()))
+// }
 
 // NewDeviceRemovedMessage creates a new device-removed message. The device-removed message is produced by a DeviceProvider or a DeviceMonitor.
 // They announce the disappearance of monitored devices.

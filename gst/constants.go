@@ -319,7 +319,7 @@ const (
 	MessageStreamCollection MessageType = C.GST_MESSAGE_STREAM_COLLECTION
 	MessageStreamsSelected  MessageType = C.GST_MESSAGE_STREAMS_SELECTED
 	MessageRedirect         MessageType = C.GST_MESSAGE_REDIRECT
-	MessageDeviceChanged    MessageType = C.GST_MESSAGE_DEVICE_CHANGED
+	// MessageDeviceChanged    MessageType = C.GST_MESSAGE_DEVICE_CHANGED
 	MessageAny              MessageType = C.GST_MESSAGE_ANY
 )
 
@@ -786,7 +786,7 @@ const (
 	QueryCaps       QueryType = C.GST_QUERY_CAPS        // (43523) – the caps query
 	QueryDrain      QueryType = C.GST_QUERY_DRAIN       // (46086) – wait till all serialized data is consumed downstream
 	QueryContext    QueryType = C.GST_QUERY_CONTEXT     // (48643) – query the pipeline-local context from downstream or upstream (since 1.2)
-	QueryBitrate    QueryType = C.GST_QUERY_BITRATE     // (51202) – the bitrate query (since 1.16)
+	// QueryBitrate    QueryType = C.GST_QUERY_BITRATE     // (51202) – the bitrate query (since 1.16)
 )
 
 // QueryTypeFlags casts GstQueryTypeFlags

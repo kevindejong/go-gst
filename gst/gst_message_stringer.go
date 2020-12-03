@@ -155,10 +155,10 @@ func (m *Message) String() string {
 			msg += fmt.Sprintf("Device %s removed", device.DisplayName())
 		}
 
-	case MessageDeviceChanged:
-		if device, _ := m.ParseDeviceChanged(); device != nil {
-			msg += fmt.Sprintf("Device %s had its properties updated", device.DisplayName())
-		}
+	// case MessageDeviceChanged:
+	// 	if device, _ := m.ParseDeviceChanged(); device != nil {
+	// 		msg += fmt.Sprintf("Device %s had its properties updated", device.DisplayName())
+	// 	}
 
 	case MessagePropertyNotify:
 		obj, propName, propVal := m.ParsePropertyNotify()

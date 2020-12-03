@@ -178,7 +178,7 @@ func (c *Caps) CanIntersect(caps *Caps) bool {
 func (c *Caps) Copy() *Caps { return wrapCaps(C.gst_caps_copy(c.Instance())) }
 
 // CopyNth creates a new GstCaps and appends a copy of the nth structure contained in caps.
-func (c *Caps) CopyNth(n uint) *Caps { return wrapCaps(C.gst_caps_copy_nth(c.Instance(), C.guint(n))) }
+// func (c *Caps) CopyNth(n uint) *Caps { return wrapCaps(C.gst_caps_copy_nth(c.Instance(), C.guint(n))) }
 
 // FilterAndMapInPlace calls the provided function once for each structure and caps feature in the Caps.
 // In contrast to ForEach, the function may modify the structure and features. In contrast to MapInPlace,
@@ -391,9 +391,9 @@ func (c *Caps) SetFeaturesAt(idx uint, features *CapsFeatures) {
 }
 
 // SetFeaturesSimple sets the CapsFeatures for all the structures of these caps.
-func (c *Caps) SetFeaturesSimple(features *CapsFeatures) {
-	C.gst_caps_set_features_simple(c.Instance(), features.Instance())
-}
+// func (c *Caps) SetFeaturesSimple(features *CapsFeatures) {
+// 	C.gst_caps_set_features_simple(c.Instance(), features.Instance())
+// }
 
 // SetValue sets the given field on all structures of caps to the given value. This is a convenience
 // function for calling SetValue on all structures of caps. If the value cannot be coerced to a C type,
